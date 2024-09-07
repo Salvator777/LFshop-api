@@ -8,11 +8,11 @@ then
  if ps -a | grep $srv_name | awk '{print $1}' | xargs kill $1
  then
  echo "starting ${srv_name}"
- ./$srv_name > /dev/null 2>&1 &
+ ../$srv_name > /dev/null 2>&1 &
  echo "start ${srv_name} success"
  fi
 else
 echo "starting ${srv_name}"
- ./$srv_name > /dev/null 2>&1 &
+ ../$srv_name > /dev/null 2>&1 &
  echo "start ${srv_name} success"
 fi
