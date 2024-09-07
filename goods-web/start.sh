@@ -1,5 +1,5 @@
 srv_name="goods_web_main"
-chmod +x ../$srv_name
+chmod +x ./$srv_name
 #重启，如果已经存在则关闭重启
 if pgrep -x $srv_name > /dev/null
 then
@@ -8,11 +8,11 @@ then
  if ps -a | grep $srv_name | awk '{print $1}' | xargs kill $1
  then
  echo "starting ${srv_name}"
- ../$srv_name > /dev/null 2>&1 &
+ ./$srv_name > /dev/null 2>&1 &
  echo "start ${srv_name} success"
  fi
 else
 echo "starting ${srv_name}"
- ../$srv_name > /dev/null 2>&1 &
+ ./$srv_name > /dev/null 2>&1 &
  echo "start ${srv_name} success"
 fi
